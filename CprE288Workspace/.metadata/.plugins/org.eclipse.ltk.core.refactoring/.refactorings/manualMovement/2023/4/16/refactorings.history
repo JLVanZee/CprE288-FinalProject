@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;manualMovement/lab7.c&apos; to &apos;manualMovement.c&apos;" description="Rename resource &apos;lab7.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lab7.c" name="manualMovement.c" stamp="1681950726590" updateReferences="true"/>
+</session>

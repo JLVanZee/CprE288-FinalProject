@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;calibration/lcd_rotatingBanner.c&apos; to &apos;calibration.c&apos;" description="Rename resource &apos;lcd_rotatingBanner.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lcd_rotatingBanner.c" name="calibration.c" stamp="1675963845158" updateReferences="true"/>
+</session>
