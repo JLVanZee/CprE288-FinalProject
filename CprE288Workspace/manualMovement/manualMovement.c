@@ -41,6 +41,7 @@ int main(void) {
         switch(movementDirection) {
             case 'w':
                 move_forward(sensor_data, movementDirection);
+                lcd_printf("Left %d \n \r Right %d", sensor_data -> cliffFrontLeftSignal, sensor_data -> cliffFrontRightSignal);
                 break;
             case 's':
                 move_backward(sensor_data, movementDirection);

@@ -23,6 +23,32 @@ int move_forward (oi_t *sensor_data, char drive){
             oi_update(sensor_data);
             sum+= sensor_data->distance;
             drive = uart_receive_nonblocking();
+
+            if(sensor_data -> bumpRight){
+                uart_sendStr("Bump Right");
+                break;
+            }
+            if(sensor_data -> bumpLeft){
+                uart_sendStr("Bump Left");
+                break;
+            }
+            if(sensor_data -> cliffLeftSignal < 2300 || sensor_data -> cliffFrontLeftSignal < 2300){
+                uart_sendStr("CAUTION LEFT PIT");
+                break;
+            }
+            if(sensor_data -> cliffRightSignal < 2300 || sensor_data -> cliffFrontRightSignal < 2300){
+                uart_sendStr("CAUTION RIGHT PIT");
+                break;
+            }
+            if(sensor_data -> cliffLeftSignal > 2700 || sensor_data -> cliffFrontLeftSignal > 2700){
+                uart_sendStr("LEFT SENSOR ON BOUNDARY");
+                break;
+            }
+            if(sensor_data -> cliffRightSignal > 2700 || sensor_data -> cliffFrontRightSignal > 2700){
+                uart_sendStr("RIGHT SENSOR ON BOUNDARY");
+                break;
+            }
+
         }
     oi_setWheels(0,0);
     return 0;
